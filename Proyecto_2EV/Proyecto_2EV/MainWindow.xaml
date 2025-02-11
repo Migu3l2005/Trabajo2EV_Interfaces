@@ -1,0 +1,62 @@
+﻿<Window x:Class="Proyecto_2EV.MainWindow"
+        Background="#242424"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        WindowStyle="None"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto_2EV"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="525" Width="750">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="145*"></RowDefinition>
+            <RowDefinition Height="214*" ></RowDefinition>
+            <RowDefinition Height="75*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <WrapPanel HorizontalAlignment="Right" Width="60" Margin="0,10,0,0">
+                <Image Source="C:\Users\migue\Downloads\Img_Proyecto2EV_Interfaces\minimizar.png" Width="17" VerticalAlignment="Center" Margin="10,0,7,0" MouseDown="MinimizarVentana" ></Image>
+                <Image Source="C:\Users\migue\Downloads\Img_Proyecto2EV_Interfaces\cerrar.png" Height="17" MouseDown="CerrarVentana"></Image>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center" Margin="0,10,0,0" Height="100">
+                <Image Source="C:\Users\migue\Downloads\Img_Proyecto2EV_Interfaces\NORTHWIND.png" Width="300" VerticalAlignment="Center" Margin="0,30,0,0"></Image>
+                <Image Source="C:\Users\migue\Downloads\Img_Proyecto2EV_Interfaces\bd 1.png" Height="122" Width="101" VerticalAlignment="Top"></Image>
+            </WrapPanel>
+
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Width="250">
+            <StackPanel>
+                <TextBlock FontWeight="Bold" FontSize="16" Foreground="#5DB85B" Margin="0,0,0,10">Usuario</TextBlock>
+                <TextBox Background="#242424" FontSize="16" Foreground="#5DB85B" BorderBrush="#242424" x:Name="usuario"></TextBox>
+                <Image Source="C:\Users\migue\Downloads\Img_Proyecto2EV_Interfaces\Line 1.png"></Image>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock FontWeight="Bold" FontSize="16" Foreground="#5DB85B" Margin="0,15,0,10">Contraseña</TextBlock>
+                <PasswordBox Background="#242424" Foreground="#5DB85B" BorderBrush="#242424" x:Name="contraseña"></PasswordBox>
+                <Image Source="C:\Users\migue\Downloads\Img_Proyecto2EV_Interfaces\Line 1.png"></Image>
+            </StackPanel>
+
+            <TextBlock x:Name="mensajeError" Foreground="Red" Margin="0,10,0,0"></TextBlock>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="2">
+            <Button Width="135" Height="35" x:Name="BotonEntrar" Background="#5DB85B" BorderBrush="#242424" FontWeight="Bold" Foreground="#242424" FontSize="16" Click="loggin" Content="Entrar">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

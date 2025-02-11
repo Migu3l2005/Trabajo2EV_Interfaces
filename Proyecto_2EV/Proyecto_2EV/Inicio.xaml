@@ -1,0 +1,59 @@
+﻿<Page x:Class="Proyecto_2EV.Inicio"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Proyecto_2EV"
+      mc:Ignorable="d"
+      Background="#242424"
+      d:DesignHeight="525" d:DesignWidth="750"
+      Title="Inicio">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230" ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*"></RowDefinition>
+            <RowDefinition Height="137*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" Width="520" >
+            <WrapPanel HorizontalAlignment="Right" Width="60" Margin="0,10,0,0">
+                <Image Source="C:\Users\migue\Downloads\Img_Proyecto2EV_Interfaces\minimizar.png" Width="17" VerticalAlignment="Center" Margin="10,0,7,0" MouseDown="MinimizarVentana" ></Image>
+                <Image Source="C:\Users\migue\Downloads\Img_Proyecto2EV_Interfaces\cerrar.png" Height="17" MouseDown="CerrarVentana"></Image>
+            </WrapPanel>
+            <Image Margin="40,0,0,0" Source="C:\Users\migue\Downloads\Img_Proyecto2EV_Interfaces\group 9.png" Height="52" Width="100" HorizontalAlignment="Left">
+            </Image>
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="350">
+            <ScrollViewer Height="350" VerticalScrollBarVisibility="Auto">
+                <DataGrid Name="tabla" HeadersVisibility="Column" Background="#242424" FontSize="19" 
+                  FontWeight="Bold" BorderBrush="#242424" IsReadOnly="True"
+                  AutoGenerateColumns="True" ScrollViewer.CanContentScroll="True">
+
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#242424"/>
+                            <Setter Property="Foreground" Value="#5DB85B"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Background" Value="#242424"/>
+                            <Setter Property="Foreground" Value="#5DB85B"/>
+                            <Setter Property="BorderBrush" Value="#242424"/>
+                            <Setter Property="BorderThickness" Value="10"/>
+                        </Style>
+                    </DataGrid.CellStyle>
+                </DataGrid>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Page>
